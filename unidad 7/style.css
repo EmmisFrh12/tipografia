@@ -1,0 +1,183 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #f5f1e8;
+  --ink: #292929;
+  --red: #d71920;
+  --yellow: #ffcf00;
+  --panel: #fffdf8;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--ink);
+}
+
+.topbar {
+  height: 86px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--panel);
+  border-bottom: 1px solid #e7e0d4;
+  position: relative;
+  z-index: 2;
+}
+
+.brand-logo {
+  width: 80px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: var(--red);
+  border: 3px solid var(--yellow);
+  border-radius: 9px;
+  color: white;
+  font-size: 25px;
+  font-weight: 900;
+  box-shadow: 0 3px 0 #a80f16;
+}
+
+.brand h1 {
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin: 0 0 5px;
+}
+
+.brand p {
+  font-size: 11px;
+  color: #77716a;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 9px;
+}
+
+button {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  background: var(--red);
+  color: white;
+  transition: transform 0.15s, background 0.15s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: #b9141b;
+}
+
+button.secondary {
+  background: #ece7dd;
+  color: var(--ink);
+}
+
+button.secondary:hover {
+  background: #ddd5c8;
+}
+
+#stage {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 86px);
+  height: calc(100dvh - 86px);
+  overflow: hidden;
+}
+
+#stage canvas {
+  display: block;
+}
+
+.instructions {
+  position: absolute;
+  z-index: 1;
+  left: 24px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  pointer-events: none;
+}
+
+.instructions p {
+  margin: 0;
+  color: #716b62;
+  font-size: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #d71920;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .topbar {
+    height: 108px;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+
+  .brand h1 {
+    font-size: 13px;
+  }
+
+  .controls {
+    gap: 6px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  #stage {
+    height: calc(100vh - 108px);
+    height: calc(100dvh - 108px);
+  }
+
+  .instructions {
+    left: 12px;
+    bottom: 12px;
+  }
+}
