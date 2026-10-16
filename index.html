@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,14 +8,11 @@
 </head>
 <body>
   <header class="topbar">
+    
+<div class="brand">
+  <img src="LEGO_logo.svg" alt="Logo de LEGO" class="brand-logo">
+  <div>
 
-    <div class="brand">
-      <img
-        src="LEGO_logo.svg"
-        alt="Logo de LEGO"
-        class="brand-logo"
-      >
-      <div>
         <h1>PLAY WELL</h1>
         <p>just imagine</p>
       </div>
@@ -26,42 +22,12 @@
       <button id="breakBtn">Desarmar logo</button>
       <button id="resetBtn" class="secondary">Reconstruir</button>
     </div>
-
   </header>
-
-  <!-- Controles de gravedad y captura -->
-  <section class="tools-bar">
-
-    <div class="gravity-control">
-      <label for="gravitySlider">
-        Gravedad:
-        <strong id="gravityValue">1.0</strong>
-      </label>
-
-      <input
-        type="range"
-        id="gravitySlider"
-        min="0"
-        max="2"
-        step="0.1"
-        value="1"
-      >
-
-      <span class="gravity-hint">0 = sin gravedad · 2 = alta</span>
-    </div>
-
-    <button id="finishBtn" class="finish-button" type="button">
-      Finalizar y tomar foto
-    </button>
-
-  </section>
 
   <main id="stage">
     <div class="instructions">
       <span class="dot"></span>
-      <p id="status">
-        Explora las letras. Haz clic en el logo para comenzar.
-      </p>
+      <p id="status">Explora las letras. Haz clic en el logo para comenzar.</p>
     </div>
   </main>
 
